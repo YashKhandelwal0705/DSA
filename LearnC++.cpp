@@ -10,14 +10,14 @@
 
 
 
-
+// printing name 
 
 
 // #include<iostream>
 // using namespace std;
 // int main(){
 //     cout<< "Hey Yash!"  << endl <<  "ji" << endl;
-//     cout<< "Hey Yah!";
+//     cout<< "Hey Yash!";
 //   return 0;
 // }
 
