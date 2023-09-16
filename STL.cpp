@@ -45,16 +45,16 @@
 //ITERATORS
 
 
-vector<int>::iterator it = v.begin();
+// vector<int>::iterator it = v.begin();
 
-it++;
-cout << *(it) << " ";
+// it++;
+// cout << *(it) << " ";
 
-it = it + 2;
-cout << *(it) << " ";
+// it = it + 2;
+// cout << *(it) << " ";
 
-vector<int>::iterator it = v.end();
+// vector<int>::iterator it = v.end();
 
-vector<int>::iterator it = v.rend();
+// vector<int>::iterator it = v.rend();
 
-vector<int>::iterator it = v.rbegin();
+// vector<int>::iterator it = v.rbegin();
