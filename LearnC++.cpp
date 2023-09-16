@@ -17,7 +17,7 @@
 // using namespace std;
 // int main(){
 //     cout<< "Hey Yash!"  << endl <<  "ji" << endl;
-//     cout<< "Hey Yash!";
+//     cout<< "Hey Yah!";
 //   return 0;
 // }
 
