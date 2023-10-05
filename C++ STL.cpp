@@ -276,3 +276,195 @@ void explainSet(){
 }
 
 
+
+//MULTISET
+
+
+void explainMultiSet() {
+    //everthing same as set 
+    // only stores duplicate elements also
+
+    multiset<int>ms;
+    ms.insert(1); //{1}
+    ms.insert(1); //{1,1}
+    ms.insert(1); //{1,1,1}
+
+    ms.erase(1); // all 1's erased
+
+    int cnt =ms.count(1);
+
+    //only a single one erased
+    ms.erase(ms.find(1));
+
+
+    ms.erase(ms.find(1), ms.find(1)+2);
+
+    //rest all functions are same as set
+
+}
+
+
+
+
+//UNORDERED SET
+
+void explainUSet(){
+    // lower_bound and upper_bound function does not work, rest all functions are same as above
+    // It does not store in any particular order
+    // it has a better complexity than set in most cases, except some collision happens
+}
+
+
+
+
+
+//MAP
+
+void explainMap(){
+
+    map<int , int> mpp;
+
+    map <int , pari<int,int>> mpp;         //  different ways to store values
+
+    map<pair <int,int> , int> mpp;
+
+
+    mpp[1]=2;
+    mpp.emplace({3,1});
+
+    mpp.insert({2,4});
+
+    mpp[{2,3}] =10;
+
+    for (auto it : mpp) {
+        cout << it.first << " " << it.second << endl;
+    }
+
+    cout << mpp[1];
+    cout << mpp[5];
+
+    auto it =mpp.find(3);
+    cout << *(it).second;
+
+    auto it =mpp.find(5);
+
+    auto it =mpp.lower_bound(2);
+
+    auto it =mpp.upper_bound(3);
+
+    //erase,swap,size,empty are same as above
+}
+
+
+
+//MULTIMAP
+
+void MultiMap(){
+    //everything same as amap , only it can store multiple keys
+    //only mpp[key] cannot be used here
+}
+
+
+//UNORDERED MAP
+
+void explainUnorderedMap(){
+    //same as set and unordered_set difference.
+}
+
+
+
+
+//SORTING
+void explainSort(){
+
+    sort(a,a+n);
+    sort(v.begin(),v.end());
+
+    sort(a+2,a+4);
+    sort(a,a+n,greater<int>);
+}
+
+
+
+
+for example -->
+
+EXAMPLE 1 -->
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+
+int n,i;
+cin >> n;
+int arr[n];
+for (i=0;i<n;i++){
+    cin >> arr[i];
+}
+for (i=0;i<n;i++){
+    cout << arr[i] << " ";
+}
+
+sort(arr,arr+n);
+cout << "Sorted array:";
+for (i=0;i<n;i++){
+    cout  << arr[i] << " ";
+}
+    return 0;
+
+}
+
+EXAMPLE 2--> 
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool comp(pair<int,int>p1,pair<int,int>p2){
+    if(p1.second < p2.second) return true;
+    if (p1.second > p2.second) return false ;
+
+    if (p1.first > p2.first) return true;
+    return false;
+}
+
+int main() {
+    int n = 3;
+
+    pair <int,int> a[]= {{1,2},{2,1},{4,1}};
+
+    //sort it according to second element
+    // if second element is same , then sort it according to first element in descending order
+
+    sort(a,a+n,comp);
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        cout << a[i].first << "," << a[i].second << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+//COMMON FUNCTIONS
+void explainExtra(){
+    int num=7;
+    int cnt= __builtin_popcount();
+
+    long long num = 137834767843;
+    int cnt =__builtin_popcountll();
+
+    string s="123";
+    sort(s.begin,s.end());
+
+    do {
+        cout << s << endl;
+    }while (next_permutation(s.begin(),s.end()));
+
+    int maxi = *max_element(a,a+n);
+}
