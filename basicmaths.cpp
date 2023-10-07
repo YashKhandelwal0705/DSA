@@ -50,3 +50,65 @@ public:
     };
 
 
+
+
+
+/*Problem statement 3:
+Given an integer x, return true if x is a 
+palindrome
+, and false otherwise.
+*/
+
+
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        int temp=x;
+        long revNum=0;
+        while(temp>0){
+            int ld=temp%10;
+            temp=temp/10;
+            revNum=revNum*10 +ld;
+        }
+        if (revNum==x){
+            return true;
+        }
+        else
+            return false;
+
+    }
+};
+
+
+
+
+
+
+
+/*Problem Statement 4:
+check armstrong number*/
+
+
+bool isArmstrong(int n) {
+    int temp = n;
+    int count = 0;
+    int sum = 0;
+    while (n > 0) {
+        n /= 10;
+        count++;
+    }
+
+    n = temp;
+
+    while (n > 0) {
+        int ld = n % 10;
+        sum += pow(ld, count);
+        n /= 10;
+    }
+    return (sum == temp);
+}
+
+
+
+
+
