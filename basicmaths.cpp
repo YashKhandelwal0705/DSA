@@ -112,3 +112,27 @@ bool isArmstrong(int n) {
 
 
 
+
+
+
+/*Problem statement 5:
+You are given an integer ‘n’.
+Function ‘sumOfDivisors(n)’ is defined as the sum of all divisors of ‘n’.
+Find the sum of ‘sumOfDivisors(i)’ for all ‘i’ from 1 to ‘n’.
+*/
+
+
+
+int sumOfAllDivisors(int n){
+	int totalSum = 0;
+	 for(int i=1;i<=n;i++){
+    	totalSum += (n/i)*i;
+  }
+		return totalSum;
+}
+
+
+
+
+
+
