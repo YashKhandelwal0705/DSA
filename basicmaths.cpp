@@ -156,3 +156,40 @@ bool isPrime(int n){
 
 
 
+
+/*Problem Statement7:
+You are given two integers 'n', and 'm'.
+Calculate 'gcd(n,m)', without using library functions.
+*/
+
+int calcGCD(int n, int m)
+{
+    int l , s;
+     if (n == 0 || m == 0)
+     {
+       return 0;
+     }
+     
+     if(n > m)
+     {
+       l = n;
+       s = m;
+     }
+     else{
+       l = m;
+       s = n;
+     }
+
+     while(l%s != 0)
+     {
+       int temp = l%s;
+       l = s;
+       s = temp;
+     }
+    return s;
+    
+}
+
+
+
+
