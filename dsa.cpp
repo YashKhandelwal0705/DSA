@@ -531,3 +531,68 @@ public:
 
 
 
+/*Problem statement:
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+*/
+
+
+
+#include <iostream>
+#include <vector>
+
+int singleNumber(std::vector<int>& nums) {
+    for (int i = 0; i < nums.size(); i++) {
+        int num = nums[i];
+        bool foundDuplicate = false;
+
+        for (int j = 0; j < nums.size(); j++) {
+            if (i != j && nums[j] == num) {
+                foundDuplicate = true;
+                break;
+            }
+        }
+
+        if (!foundDuplicate) {
+            return num;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    std::vector<int> nums = {4, 1, 2, 1, 2};
+    int single = singleNumber(nums);
+    
+    if (single != -1) {
+        std::cout << "The single number is: " << single << std::endl;
+    } else {
+        std::cout << "No single number found." << std::endl;
+    }
+
+    return 0;
+}
+
+
+//second approach
+
+#include <iostream>
+#include <vector>
+
+int singleNumber(std::vector<int>& nums) {
+    int result = 0;
+    for (int num : nums) {
+        result = result ^ num;
+    }
+    return result;
+}
+
+int main() {
+    std::vector<int> nums = {4, 1, 2, 1, 2};
+    int single = singleNumber(nums);
+    std::cout << "The single number is: " << single << std::endl;
+    return 0;
+}
+
+
+
