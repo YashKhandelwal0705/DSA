@@ -12,3 +12,35 @@ vector<int> printNos(int x) {
        return arr;
    }
 }
+
+
+/*Problem statement 2:
+You are given an integer ‘n’.
+Return an array having “Coding Ninjas” ‘n’ times, without using a loop.
+*/
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+vector<string> getArray(int n) {
+    if (n == 0) {
+        return vector<string>();
+    } else {
+        vector<string> result = getArray(n-1);
+        result.push_back("Coding Ninjas");
+        return result;
+    }
+}
+
+int main() {
+    int n = 5;
+    vector<string> result = getArray(n);
+    for (string s : result) {
+        cout << s << " ";
+    }
+    return 0;
+}
