@@ -31,7 +31,7 @@ vector<string> getArray(int n) {
         return vector<string>();
     } else {
         vector<string> result = getArray(n-1);
-        result.push_back("Coding Ninjas");
+        result.push_back("Yash");
         return result;
     }
 }
