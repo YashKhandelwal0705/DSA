@@ -44,5 +44,30 @@ int main() {
 	}
 	return 0;
 }
+
+
+
+
+
+
+/*problem statemnt :
+ Pascal's Triangle II
+Given an integer rowIndex, return the rowIndexth (0-indexed) row of the Pascal's triangle.
+In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:*/
 	
+
+
+class Solution {
+public:
+    vector<int> getRow(int rowIndex) {
+    std::vector<int> result(1, 1);
+        long p = 1;
+        for(int k = 1; k <= rowIndex; k++) {
+        long n = p * (rowIndex - k + 1) / k;
+        result.push_back(n);
+        p = n;
+        }
+    return result;
+    }
+};
 
