@@ -596,3 +596,32 @@ int main() {
 
 
 
+
+//Tower of Hanoi
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void tower(int a,char source,char auxiliary,char destination){
+    if(a==1){
+        cout << a << " MOVED FROM " << source << " to " << destination << endl; 
+        return;
+    }
+    
+    tower(a-1,source ,destination,auxiliary);
+        cout << a << " MOVED FROM " << source << " TO " << destination << endl;
+    
+    
+    
+    tower(a-1,auxiliary,source,destination);   
+    
+}
+
+int main() {
+    int a;
+    cout << "enter number of disks";
+    cin >>a;
+    tower(a,'A','B','C');
+    return 0;
+}
+
