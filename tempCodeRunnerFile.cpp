@@ -1,10 +1,19 @@
-
 #include<bits/stdc++.h>
-using namespace std;
+// using namespace std;
 
-void explainVector(){
-    vector<int>v;
-    v.push_back(1);
-    v.emplace_back(2);
+// int printSum(int n){
+//     if(n==0){
+//         return 0;
+//     }
+//     return n + printSum(n-1);
+// }
 
-}
+// int main(){
+//     int n;
+//     cin >> n;
+//     printSum(n);
+//     cout << printSum(n);
+//     return 0;
+// }
+
+
