@@ -611,12 +611,10 @@ void tower(int a,char source,char auxiliary,char destination){
     tower(a-1,source ,destination,auxiliary);
         cout << a << " MOVED FROM " << source << " TO " << destination << endl;
     
-    
-    
+       
     tower(a-1,auxiliary,source,destination);   
-    
+     
 }
-
 int main() {
     int a;
     cout << "enter number of disks";

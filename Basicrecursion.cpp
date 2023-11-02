@@ -123,27 +123,70 @@
 
 //reverse array
 
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// void reverseArray(int i,int arr[],int n){
+//     if(i>=n/2){
+//         return;
+//     }
+//     swap(arr[i],arr[n-i-1]);
+//     reverseArray(i+1,arr,n);
+// }
+
+// int main(){
+//     int n;
+//     cin >>n;
+//     int arr[n];
+//     for (int i=0;i<n;i++){
+//         cin >> arr[i];
+//     }
+//     reverseArray(0,arr,n);
+//     for(int i=0;i<n;i++){
+//         cout << arr[i] << " ";
+//     }
+//     return 0;
+// }
+
+
+
+//check if string is a palindrome
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
-void reverseArray(int i,int arr[],int n){
-    if(i>=n/2){
-        return;
+bool isPalindrome(int i,string& str) {
+    if(i>=str.size()/2) return true;
+    if(str[i]!=str[str.size()-i-1]) return false;
+    return isPalindrome(i+1,str);
     }
-    swap(arr[i],arr[n-i-1]);
-    reverseArray(i+1,arr,n);
-}
 
 int main(){
-    int n;
-    cin >>n;
-    int arr[n];
-    for (int i=0;i<n;i++){
-        cin >> arr[i];
-    }
-    reverseArray(0,arr,n);
-    for(int i=0;i<n;i++){
-        cout << arr[i] << " ";
-    }
+    string str;
+    cin >> str;
+    cout << isPalindrome(0,str);
     return 0;
 }
+
+
+
+
+/*The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence,
+such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
+F(0) = 0, F(1) = 1
+F(n) = F(n - 1) + F(n - 2), for n > 1.
+Given n, calculate F(n).*/
+
+
+class Solution {
+public:
+    int fib(int n) {
+        if(n<=1){
+            return n;
+        }
+        int last=fib(n-1);
+        int second_last=fib(n-2);
+        return last+second_last;
+    }
+};

@@ -1,19 +1,25 @@
 #include<bits/stdc++.h>
 // using namespace std;
 
-// int printSum(int n){
-//     if(n==0){
-//         return 0;
+// void reverseArray(int i,int arr[],int n){
+//     if(i>=n/2){
+//         return;
 //     }
-//     return n + printSum(n-1);
+//     swap(arr[i],arr[n-i-1]);
+//     reverseArray(i+1,arr,n);
 // }
 
 // int main(){
 //     int n;
-//     cin >> n;
-//     printSum(n);
-//     cout << printSum(n);
+//     cin >>n;
+//     int arr[n];
+//     for (int i=0;i<n;i++){
+//         cin >> arr[i];
+//     }
+//     reverseArray(0,arr,n);
+//     for(int i=0;i<n;i++){
+//         cout << arr[i] << " ";
+//     }
 //     return 0;
 // }
-
 
