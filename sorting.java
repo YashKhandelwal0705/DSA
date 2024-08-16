@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.*;
 public class sorting {
     public static void bubbleSort(int arr[], int n)
@@ -72,6 +71,13 @@ public class sorting {
 
 
 
+
+
+
+
+
+
+
 public static void merge(int arr[], int l, int m, int r)
 {
      // Your code here
@@ -118,7 +124,63 @@ public static void mergeSort(int arr[], int l, int r)
 
 
 
+
+
+
+
+
+
+
+
+
+
+    static void quickSort(int arr[], int low, int high)
+    {
+        // code here
+        if(low<high){
+            int pI = partition(arr,low,high);
+            quickSort(arr,low, pI-1);
+            quickSort(arr, pI+1, high);
+        }
+    }
+    static int partition(int arr[], int low, int high)
+    {
+        // your code here
+        int pivot = arr[low];
+        int i=low;
+        int j=high;
+        
+        
+        while(i<j){
+            while(arr[i]<=pivot && i<=high-1){
+                i++;
+            }
+            while(arr[j]>=pivot && j>=low+1){
+                j--;
+            }
+            if(i<j){
+                int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+        int temp=arr[low];
+        arr[low]=arr[j];
+        arr[j]=temp;
+        return j;
+    } 
+
+   
     
+
+
+
+
+
+
+
+
+
 
     public static void main(String args[]){
 
@@ -131,7 +193,8 @@ public static void mergeSort(int arr[], int l, int r)
     }
 
     //insertionSort(arr,n);
-    mergeSort(arr,0,arr.length-1);
+    //mergeSort(arr,0,arr.length-1);
+    quickSort(arr,0,n-1);
     for(int i=0;i<=arr.length-1;i++){
         System.out.print(arr[i]+ " ");
     }
